@@ -28,11 +28,12 @@ class ViewController: UIViewController {
         let parameters: [String: String] = [
             "format": "json",
             "action": "query",
-            "prop": "extracts",
+            "prop": "extracts|pageimages",
             "exintro": "",
             "explaintext": "",
             "indexpageids": "",
             "redirects": "1",
+            "pithumbsize": "500",
             "titles": searchField.text!
         ]
         
@@ -44,11 +45,14 @@ class ViewController: UIViewController {
                 let firstPage = json["query"]["pageids"][0].stringValue
                 let firstResult = json["query"]["pages"][firstPage]
                 
-                print("Title: \(firstResult["extract"])")
-                print("Extract: \(firstResult["extract"])")
+                print("Result: \(firstResult)")
                 
                 DispatchQueue.main.async {
                     self.articleLabel.text = firstResult["extract"].stringValue
+                    
+                    if let imageUrl = URL(string: firstResult["thumbnail"]["source"].stringValue) {
+                        self.articleImage.sd_setImage(with: imageUrl, completed: nil)
+                    }
                 }
             case .failure(let error):
                 print(error)
