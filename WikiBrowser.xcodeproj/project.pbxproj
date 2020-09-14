@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62D73801D0CC570A38B0420A /* Pods_WikiBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAC522DB44F67E7708B0396 /* Pods_WikiBrowser.framework */; };
 		F0E6F8FC250F7FF80089BE9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6F8FB250F7FF80089BE9A /* AppDelegate.swift */; };
 		F0E6F8FE250F7FF80089BE9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6F8FD250F7FF80089BE9A /* SceneDelegate.swift */; };
 		F0E6F900250F7FF80089BE9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6F8FF250F7FF80089BE9A /* ViewController.swift */; };
@@ -16,7 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F0E6F8F8250F7FF80089BE9A /* WikiBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikiBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C36FE07748B629AA287EF48 /* Pods-WikiBrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WikiBrowser.release.xcconfig"; path = "Target Support Files/Pods-WikiBrowser/Pods-WikiBrowser.release.xcconfig"; sourceTree = "<group>"; };
+		85C3F570979054DB2EFD62F3 /* Pods-WikiBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WikiBrowser.debug.xcconfig"; path = "Target Support Files/Pods-WikiBrowser/Pods-WikiBrowser.debug.xcconfig"; sourceTree = "<group>"; };
+		F0E6F8F8250F7FF80089BE9A /* Wiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E6F8FB250F7FF80089BE9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0E6F8FD250F7FF80089BE9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F0E6F8FF250F7FF80089BE9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		F0E6F904250F7FF90089BE9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0E6F907250F7FF90089BE9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0E6F909250F7FF90089BE9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFAC522DB44F67E7708B0396 /* Pods_WikiBrowser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WikiBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,24 +35,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62D73801D0CC570A38B0420A /* Pods_WikiBrowser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09D07D54A9176E775927B44B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFAC522DB44F67E7708B0396 /* Pods_WikiBrowser.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1ADF37909D4D1BD9055E3C09 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85C3F570979054DB2EFD62F3 /* Pods-WikiBrowser.debug.xcconfig */,
+				5C36FE07748B629AA287EF48 /* Pods-WikiBrowser.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F0E6F8EF250F7FF80089BE9A = {
 			isa = PBXGroup;
 			children = (
 				F0E6F8FA250F7FF80089BE9A /* WikiBrowser */,
 				F0E6F8F9250F7FF80089BE9A /* Products */,
+				1ADF37909D4D1BD9055E3C09 /* Pods */,
+				09D07D54A9176E775927B44B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		F0E6F8F9250F7FF80089BE9A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F0E6F8F8250F7FF80089BE9A /* WikiBrowser.app */,
+				F0E6F8F8250F7FF80089BE9A /* Wiki.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0E6F90C250F7FF90089BE9A /* Build configuration list for PBXNativeTarget "WikiBrowser" */;
 			buildPhases = (
+				7D6F98EC402F1340CD3EFDE7 /* [CP] Check Pods Manifest.lock */,
 				F0E6F8F4250F7FF80089BE9A /* Sources */,
 				F0E6F8F5250F7FF80089BE9A /* Frameworks */,
 				F0E6F8F6250F7FF80089BE9A /* Resources */,
+				B309AAEA9354D7BAB7068194 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -84,7 +111,7 @@
 			);
 			name = WikiBrowser;
 			productName = WikiBrowser;
-			productReference = F0E6F8F8250F7FF80089BE9A /* WikiBrowser.app */;
+			productReference = F0E6F8F8250F7FF80089BE9A /* Wiki.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7D6F98EC402F1340CD3EFDE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WikiBrowser-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B309AAEA9354D7BAB7068194 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WikiBrowser/Pods-WikiBrowser-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WikiBrowser/Pods-WikiBrowser-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WikiBrowser/Pods-WikiBrowser-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F0E6F8F4250F7FF80089BE9A /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		F0E6F90D250F7FF90089BE9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85C3F570979054DB2EFD62F3 /* Pods-WikiBrowser.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -292,7 +362,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = info.startupbuilder.WikiBrowser;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Wiki;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,6 +370,7 @@
 		};
 		F0E6F90E250F7FF90089BE9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C36FE07748B629AA287EF48 /* Pods-WikiBrowser.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -310,7 +381,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = info.startupbuilder.WikiBrowser;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Wiki;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
